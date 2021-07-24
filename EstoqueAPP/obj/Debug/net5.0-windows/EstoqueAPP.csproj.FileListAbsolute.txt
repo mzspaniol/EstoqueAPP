@@ -117,5 +117,6 @@ C:\Matheus\EstoqueAPP\EstoqueAPP\EstoqueAPP\obj\Debug\net5.0-windows\ref\Estoque
 C:\Matheus\EstoqueAPP\EstoqueAPP\EstoqueAPP\obj\Debug\net5.0-windows\EstoqueAPP.pdb
 C:\Matheus\EstoqueAPP\EstoqueAPP\EstoqueAPP\obj\Debug\net5.0-windows\EstoqueAPP.genruntimeconfig.cache
 C:\Matheus\EstoqueAPP\EstoqueAPP\EstoqueAPP\obj\Debug\net5.0-windows\EstoqueAPP.FormCategoria.resources
-C:\Matheus\EstoqueAPP\EstoqueAPP\EstoqueAPP\obj\Debug\net5.0-windows\EstoqueAPP.FormProduto.resources
 C:\Matheus\EstoqueAPP\EstoqueAPP\EstoqueAPP\bin\Debug\net5.0-windows\estoque.db
+C:\Matheus\EstoqueAPP\EstoqueAPP\EstoqueAPP\obj\Debug\net5.0-windows\EstoqueAPP.FormCategoriaProduto.resources
+C:\Matheus\EstoqueAPP\EstoqueAPP\EstoqueAPP\obj\Debug\net5.0-windows\EstoqueAPP.Forms.FormProduto.resources

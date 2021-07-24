@@ -1,15 +1,15 @@
 ﻿
-namespace EstoqueAPP
+namespace EstoqueAPP.Forms
 {
     partial class FormProduto
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -24,140 +24,138 @@ namespace EstoqueAPP
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCategoria = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblNome = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.btnAddCategoria = new System.Windows.Forms.Button();
-            this.btnEditCategoria = new System.Windows.Forms.Button();
-            this.lblGridProdutos = new System.Windows.Forms.Label();
-            this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.btnDeleteCategoria = new System.Windows.Forms.Button();
-            this.btnDeleteProduto = new System.Windows.Forms.Button();
-            this.btnEditProduto = new System.Windows.Forms.Button();
-            this.btnAddProduto = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.nudPreco = new System.Windows.Forms.NumericUpDown();
+            this.lblPreco = new System.Windows.Forms.Label();
+            this.lblEstoque = new System.Windows.Forms.Label();
+            this.nudEstoque = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPreco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEstoque)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblCategoria
+            // txtNome
             // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(12, 9);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(58, 15);
-            this.lblCategoria.TabIndex = 0;
-            this.lblCategoria.Text = "Categoria";
+            this.txtNome.Location = new System.Drawing.Point(12, 27);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(167, 23);
+            this.txtNome.TabIndex = 1;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSalvar.Location = new System.Drawing.Point(206, 110);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 6;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Location = new System.Drawing.Point(125, 110);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(12, 9);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(40, 15);
+            this.lblNome.TabIndex = 4;
+            this.lblNome.Text = "Nome";
             // 
             // cbCategoria
             // 
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(12, 27);
+            this.cbCategoria.Location = new System.Drawing.Point(121, 71);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(121, 23);
+            this.cbCategoria.Size = new System.Drawing.Size(160, 23);
             this.cbCategoria.Sorted = true;
-            this.cbCategoria.TabIndex = 1;
+            this.cbCategoria.TabIndex = 4;
             // 
-            // btnAddCategoria
+            // lblCategoria
             // 
-            this.btnAddCategoria.Location = new System.Drawing.Point(139, 27);
-            this.btnAddCategoria.Name = "btnAddCategoria";
-            this.btnAddCategoria.Size = new System.Drawing.Size(48, 24);
-            this.btnAddCategoria.TabIndex = 2;
-            this.btnAddCategoria.Text = "Add";
-            this.btnAddCategoria.UseVisualStyleBackColor = true;
-            this.btnAddCategoria.Click += new System.EventHandler(this.btnAddCategoria_Click);
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(121, 53);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(58, 15);
+            this.lblCategoria.TabIndex = 8;
+            this.lblCategoria.Text = "Categoria";
             // 
-            // btnEditCategoria
+            // nudPreco
             // 
-            this.btnEditCategoria.Location = new System.Drawing.Point(193, 27);
-            this.btnEditCategoria.Name = "btnEditCategoria";
-            this.btnEditCategoria.Size = new System.Drawing.Size(48, 24);
-            this.btnEditCategoria.TabIndex = 4;
-            this.btnEditCategoria.Text = "Edit";
-            this.btnEditCategoria.UseVisualStyleBackColor = true;
+            this.nudPreco.DecimalPlaces = 2;
+            this.nudPreco.Location = new System.Drawing.Point(185, 27);
+            this.nudPreco.Name = "nudPreco";
+            this.nudPreco.Size = new System.Drawing.Size(96, 23);
+            this.nudPreco.TabIndex = 2;
             // 
-            // lblGridProdutos
+            // lblPreco
             // 
-            this.lblGridProdutos.AutoSize = true;
-            this.lblGridProdutos.Location = new System.Drawing.Point(12, 67);
-            this.lblGridProdutos.Name = "lblGridProdutos";
-            this.lblGridProdutos.Size = new System.Drawing.Size(188, 15);
-            this.lblGridProdutos.TabIndex = 5;
-            this.lblGridProdutos.Text = "Produtos da categoria selecionada";
+            this.lblPreco.AutoSize = true;
+            this.lblPreco.Location = new System.Drawing.Point(185, 9);
+            this.lblPreco.Name = "lblPreco";
+            this.lblPreco.Size = new System.Drawing.Size(37, 15);
+            this.lblPreco.TabIndex = 11;
+            this.lblPreco.Text = "Preço";
             // 
-            // dgvProdutos
+            // lblEstoque
             // 
-            this.dgvProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdutos.Location = new System.Drawing.Point(12, 85);
-            this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.RowTemplate.Height = 25;
-            this.dgvProdutos.Size = new System.Drawing.Size(793, 323);
-            this.dgvProdutos.TabIndex = 6;
+            this.lblEstoque.AutoSize = true;
+            this.lblEstoque.Location = new System.Drawing.Point(12, 53);
+            this.lblEstoque.Name = "lblEstoque";
+            this.lblEstoque.Size = new System.Drawing.Size(49, 15);
+            this.lblEstoque.TabIndex = 13;
+            this.lblEstoque.Text = "Estoque";
             // 
-            // btnDeleteCategoria
+            // nudEstoque
             // 
-            this.btnDeleteCategoria.Location = new System.Drawing.Point(247, 27);
-            this.btnDeleteCategoria.Name = "btnDeleteCategoria";
-            this.btnDeleteCategoria.Size = new System.Drawing.Size(48, 24);
-            this.btnDeleteCategoria.TabIndex = 7;
-            this.btnDeleteCategoria.Text = "Delete";
-            this.btnDeleteCategoria.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteProduto
-            // 
-            this.btnDeleteProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteProduto.Location = new System.Drawing.Point(753, 55);
-            this.btnDeleteProduto.Name = "btnDeleteProduto";
-            this.btnDeleteProduto.Size = new System.Drawing.Size(48, 24);
-            this.btnDeleteProduto.TabIndex = 10;
-            this.btnDeleteProduto.Text = "Delete";
-            this.btnDeleteProduto.UseVisualStyleBackColor = true;
-            // 
-            // btnEditProduto
-            // 
-            this.btnEditProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditProduto.Location = new System.Drawing.Point(699, 55);
-            this.btnEditProduto.Name = "btnEditProduto";
-            this.btnEditProduto.Size = new System.Drawing.Size(48, 24);
-            this.btnEditProduto.TabIndex = 9;
-            this.btnEditProduto.Text = "Edit";
-            this.btnEditProduto.UseVisualStyleBackColor = true;
-            // 
-            // btnAddProduto
-            // 
-            this.btnAddProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddProduto.Location = new System.Drawing.Point(642, 55);
-            this.btnAddProduto.Name = "btnAddProduto";
-            this.btnAddProduto.Size = new System.Drawing.Size(48, 24);
-            this.btnAddProduto.TabIndex = 8;
-            this.btnAddProduto.Text = "Add";
-            this.btnAddProduto.UseVisualStyleBackColor = true;
+            this.nudEstoque.DecimalPlaces = 2;
+            this.nudEstoque.Location = new System.Drawing.Point(12, 71);
+            this.nudEstoque.Name = "nudEstoque";
+            this.nudEstoque.Size = new System.Drawing.Size(96, 23);
+            this.nudEstoque.TabIndex = 3;
             // 
             // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 420);
-            this.Controls.Add(this.btnDeleteProduto);
-            this.Controls.Add(this.btnEditProduto);
-            this.Controls.Add(this.btnAddProduto);
-            this.Controls.Add(this.btnDeleteCategoria);
-            this.Controls.Add(this.dgvProdutos);
-            this.Controls.Add(this.lblGridProdutos);
-            this.Controls.Add(this.btnEditCategoria);
-            this.Controls.Add(this.btnAddCategoria);
+            this.ClientSize = new System.Drawing.Size(288, 142);
+            this.ControlBox = false;
+            this.Controls.Add(this.lblEstoque);
+            this.Controls.Add(this.nudEstoque);
+            this.Controls.Add(this.lblPreco);
+            this.Controls.Add(this.nudPreco);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.lblCategoria);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.lblNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormProduto";
-            this.Text = "Controle de estoque com Entity Framework";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "FormProduto";
+            ((System.ComponentModel.ISupportInitialize)(this.nudPreco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEstoque)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,16 +163,15 @@ namespace EstoqueAPP
 
         #endregion
 
+        public System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.ComboBox cbCategoria;
-        private System.Windows.Forms.Button btnAddCategoria;
-        private System.Windows.Forms.Button btnEditCategoria;
-        private System.Windows.Forms.Label lblGridProdutos;
-        private System.Windows.Forms.DataGridView dgvProdutos;
-        private System.Windows.Forms.Button btnDeleteCategoria;
-        private System.Windows.Forms.Button btnDeleteProduto;
-        private System.Windows.Forms.Button btnEditProduto;
-        private System.Windows.Forms.Button btnAddProduto;
+        private System.Windows.Forms.Label lblPreco;
+        private System.Windows.Forms.Label lblEstoque;
+        public System.Windows.Forms.ComboBox cbCategoria;
+        public System.Windows.Forms.NumericUpDown nudPreco;
+        public System.Windows.Forms.NumericUpDown nudEstoque;
     }
 }
-

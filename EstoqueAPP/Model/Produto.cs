@@ -13,6 +13,8 @@ namespace EstoqueAPP.Model
 
         public double Preco { get; set; }
 
+        public int Estoque { get; set; }
+
         [ForeignKey("Categoria")]
         public int IdCategoria { get; set; }
 
