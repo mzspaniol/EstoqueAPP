@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EstoqueComEF5
+namespace EstoqueAPP
 {
     static class Program
     {

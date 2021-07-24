@@ -1,5 +1,5 @@
 ﻿
-namespace EstoqueComEF5
+namespace EstoqueAPP
 {
     partial class FormProduto
     {
@@ -69,6 +69,7 @@ namespace EstoqueComEF5
             this.btnAddCategoria.TabIndex = 2;
             this.btnAddCategoria.Text = "Add";
             this.btnAddCategoria.UseVisualStyleBackColor = true;
+            this.btnAddCategoria.Click += new System.EventHandler(this.btnAddCategoria_Click);
             // 
             // btnEditCategoria
             // 
@@ -139,7 +140,7 @@ namespace EstoqueComEF5
             this.btnAddProduto.Text = "Add";
             this.btnAddProduto.UseVisualStyleBackColor = true;
             // 
-            // FormMain
+            // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,7 +155,7 @@ namespace EstoqueComEF5
             this.Controls.Add(this.btnAddCategoria);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.lblCategoria);
-            this.Name = "FormMain";
+            this.Name = "FormProduto";
             this.Text = "Controle de estoque com Entity Framework";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.ResumeLayout(false);

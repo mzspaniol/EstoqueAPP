@@ -1,5 +1,5 @@
 ﻿
-namespace EstoqueComEF5
+namespace EstoqueAPP
 {
     partial class FormCategoria
     {
@@ -63,6 +63,7 @@ namespace EstoqueComEF5
             this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtNome
             // 
@@ -97,6 +98,6 @@ namespace EstoqueComEF5
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.TextBox txtNome;
     }
 }

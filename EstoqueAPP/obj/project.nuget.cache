@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iI1nDfOZygdDqiQQDMNDJkdp0059oH1jITEYdX2fAKoHR4cYHht72MgywlVWJh8Xo5JjOparb9l5chTzxL5tVg==",
+  "dgSpecHash": "Oj/4ilydriQ+CbU0tUGioOiZ+n7LOa15wGZSGyScvd1xabagWRcJpjw4wwYn7rDK9JMQjn+ge3/KShdRaGI4nQ==",
   "success": true,
-  "projectFilePath": "C:\\Matheus\\EstoqueComEF5\\EstoqueComEF5\\EstoqueComEF5\\EstoqueAPP.csproj",
+  "projectFilePath": "C:\\Matheus\\EstoqueAPP\\EstoqueAPP\\EstoqueAPP\\EstoqueAPP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mathe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mathe\\.nuget\\packages\\maroquio.util.windowsforms.simplemessagebox\\0.9.1\\maroquio.util.windowsforms.simplemessagebox.0.9.1.nupkg.sha512",
