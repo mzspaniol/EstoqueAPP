@@ -43,14 +43,14 @@ namespace EstoqueAPP
             this.btnEditCategoria = new System.Windows.Forms.Button();
             this.lblGridProdutos = new System.Windows.Forms.Label();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.btnDeleteCategoria = new System.Windows.Forms.Button();
-            this.btnDeleteProduto = new System.Windows.Forms.Button();
-            this.btnEditProduto = new System.Windows.Forms.Button();
-            this.btnAddProduto = new System.Windows.Forms.Button();
             this.clmCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEstoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDeleteCategoria = new System.Windows.Forms.Button();
+            this.btnDeleteProduto = new System.Windows.Forms.Button();
+            this.btnEditProduto = new System.Windows.Forms.Button();
+            this.btnAddProduto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,52 +146,7 @@ namespace EstoqueAPP
             this.dgvProdutos.Size = new System.Drawing.Size(363, 323);
             this.dgvProdutos.TabIndex = 6;
             this.dgvProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellContentClick);
-            // 
-            // btnDeleteCategoria
-            // 
-            this.btnDeleteCategoria.ImageIndex = 1;
-            this.btnDeleteCategoria.ImageList = this.imgListIcons;
-            this.btnDeleteCategoria.Location = new System.Drawing.Point(199, 27);
-            this.btnDeleteCategoria.Name = "btnDeleteCategoria";
-            this.btnDeleteCategoria.Size = new System.Drawing.Size(24, 24);
-            this.btnDeleteCategoria.TabIndex = 7;
-            this.btnDeleteCategoria.UseVisualStyleBackColor = true;
-            this.btnDeleteCategoria.Click += new System.EventHandler(this.btnDeleteCategoria_Click);
-            // 
-            // btnDeleteProduto
-            // 
-            this.btnDeleteProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteProduto.ImageIndex = 1;
-            this.btnDeleteProduto.ImageList = this.imgListIcons;
-            this.btnDeleteProduto.Location = new System.Drawing.Point(350, 55);
-            this.btnDeleteProduto.Name = "btnDeleteProduto";
-            this.btnDeleteProduto.Size = new System.Drawing.Size(24, 24);
-            this.btnDeleteProduto.TabIndex = 10;
-            this.btnDeleteProduto.UseVisualStyleBackColor = true;
-            // 
-            // btnEditProduto
-            // 
-            this.btnEditProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditProduto.ImageIndex = 2;
-            this.btnEditProduto.ImageList = this.imgListIcons;
-            this.btnEditProduto.Location = new System.Drawing.Point(320, 55);
-            this.btnEditProduto.Name = "btnEditProduto";
-            this.btnEditProduto.Size = new System.Drawing.Size(24, 24);
-            this.btnEditProduto.TabIndex = 9;
-            this.btnEditProduto.UseVisualStyleBackColor = true;
-            this.btnEditProduto.Click += new System.EventHandler(this.btnEditProduto_Click);
-            // 
-            // btnAddProduto
-            // 
-            this.btnAddProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddProduto.ImageKey = "Add.png";
-            this.btnAddProduto.ImageList = this.imgListIcons;
-            this.btnAddProduto.Location = new System.Drawing.Point(290, 55);
-            this.btnAddProduto.Name = "btnAddProduto";
-            this.btnAddProduto.Size = new System.Drawing.Size(24, 24);
-            this.btnAddProduto.TabIndex = 8;
-            this.btnAddProduto.UseVisualStyleBackColor = true;
-            this.btnAddProduto.Click += new System.EventHandler(this.btnAddProduto_Click);
+            this.dgvProdutos.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProdutos_CellMouseDoubleClick);
             // 
             // clmCodigo
             // 
@@ -239,6 +194,53 @@ namespace EstoqueAPP
             this.clmEstoque.ReadOnly = true;
             this.clmEstoque.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.clmEstoque.Width = 70;
+            // 
+            // btnDeleteCategoria
+            // 
+            this.btnDeleteCategoria.ImageIndex = 1;
+            this.btnDeleteCategoria.ImageList = this.imgListIcons;
+            this.btnDeleteCategoria.Location = new System.Drawing.Point(199, 27);
+            this.btnDeleteCategoria.Name = "btnDeleteCategoria";
+            this.btnDeleteCategoria.Size = new System.Drawing.Size(24, 24);
+            this.btnDeleteCategoria.TabIndex = 7;
+            this.btnDeleteCategoria.UseVisualStyleBackColor = true;
+            this.btnDeleteCategoria.Click += new System.EventHandler(this.btnDeleteCategoria_Click);
+            // 
+            // btnDeleteProduto
+            // 
+            this.btnDeleteProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteProduto.ImageIndex = 1;
+            this.btnDeleteProduto.ImageList = this.imgListIcons;
+            this.btnDeleteProduto.Location = new System.Drawing.Point(350, 55);
+            this.btnDeleteProduto.Name = "btnDeleteProduto";
+            this.btnDeleteProduto.Size = new System.Drawing.Size(24, 24);
+            this.btnDeleteProduto.TabIndex = 10;
+            this.btnDeleteProduto.UseVisualStyleBackColor = true;
+            this.btnDeleteProduto.Click += new System.EventHandler(this.btnDeleteProduto_Click);
+            // 
+            // btnEditProduto
+            // 
+            this.btnEditProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditProduto.ImageIndex = 2;
+            this.btnEditProduto.ImageList = this.imgListIcons;
+            this.btnEditProduto.Location = new System.Drawing.Point(320, 55);
+            this.btnEditProduto.Name = "btnEditProduto";
+            this.btnEditProduto.Size = new System.Drawing.Size(24, 24);
+            this.btnEditProduto.TabIndex = 9;
+            this.btnEditProduto.UseVisualStyleBackColor = true;
+            this.btnEditProduto.Click += new System.EventHandler(this.btnEditProduto_Click);
+            // 
+            // btnAddProduto
+            // 
+            this.btnAddProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddProduto.ImageKey = "Add.png";
+            this.btnAddProduto.ImageList = this.imgListIcons;
+            this.btnAddProduto.Location = new System.Drawing.Point(290, 55);
+            this.btnAddProduto.Name = "btnAddProduto";
+            this.btnAddProduto.Size = new System.Drawing.Size(24, 24);
+            this.btnAddProduto.TabIndex = 8;
+            this.btnAddProduto.UseVisualStyleBackColor = true;
+            this.btnAddProduto.Click += new System.EventHandler(this.btnAddProduto_Click);
             // 
             // FormCategoriaProduto
             // 

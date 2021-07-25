@@ -60,6 +60,8 @@ namespace EstoqueAPP
                     DataGridViewContentAlignment.MiddleCenter;
                 dgvProdutos.Columns["clmEstoque"].HeaderCell.Style.Alignment =
                     DataGridViewContentAlignment.MiddleCenter;
+                dgvProdutos.Columns["clmNome"].HeaderCell.Style.Alignment =
+                   DataGridViewContentAlignment.MiddleCenter;
             }
         }
 
@@ -96,7 +98,7 @@ namespace EstoqueAPP
                 {
                     Categoria categoria = cbCategoria.SelectedItem as Categoria;
                     //Categoria cat = db.Categorias.Include(x => x.Produtos).
-                        //FirstOrDefault(x => x.IdCategoria == categoria.IdCategoria);
+                    //FirstOrDefault(x => x.IdCategoria == categoria.IdCategoria);
 
                     int qntdeProdutos = db.Produtos.Where(x => x.IdCategoria == categoria.IdCategoria).Count();
 
@@ -136,7 +138,6 @@ namespace EstoqueAPP
             {
                 form.Text = "Cadastro de produto";
                 form.cbCategoria.SelectedIndex = cbCategoria.SelectedIndex;
-                form.cbCategoria.Enabled = false;
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     using (var db = new EstoqueAPPContext())
@@ -157,22 +158,34 @@ namespace EstoqueAPP
 
         private void btnEditProduto_Click(object sender, EventArgs e)
         {
-            using (var form = new FormProduto())
+            DataGridViewRow linhaSelecionada = null;
+            if (dgvProdutos.SelectedRows.Count > 0)
             {
-                form.Text = "Edição de produto";
-                form.cbCategoria.Text = cbCategoria.Text;
-                form.cbCategoria.Enabled = false;
-                if (form.ShowDialog() == DialogResult.OK)
+                linhaSelecionada = dgvProdutos.SelectedRows[0];
+                Produto produto = linhaSelecionada.DataBoundItem as Produto;
+                using (var form = new FormProduto())
                 {
-                    using (var db = new EstoqueAPPContext())
+                    form.Text = "Editando produto";
+                    form.txtNome.Text = produto.Nome;
+                    form.nudEstoque.Value = produto.Estoque;
+                    form.nudPreco.Value = Convert.ToDecimal(produto.Preco);
+                    form.cbCategoria.SelectedIndex =
+                        form.cbCategoria.FindString(produto.Categoria.Nome);
+                    if (form.ShowDialog() == DialogResult.OK)
                     {
-                        Produto produto = new Produto();
-                        produto.Nome = form.txtNome.Text;
-                        produto.Estoque = Convert.ToInt32(form.nudEstoque.Value);
-                        produto.Preco = Convert.ToDouble(form.nudPreco.Value);
-                        produto.IdCategoria = (cbCategoria.SelectedItem as Categoria).IdCategoria;
-                        db.Produtos.Add(produto);
-                        db.SaveChanges();
+                        using (var db = new EstoqueAPPContext())
+                        {
+                            produto.Nome = form.txtNome.Text;
+                            produto.Estoque = Convert.ToInt32(form.nudEstoque.Value);
+                            produto.Preco = Convert.ToDouble(form.nudPreco.Value);
+                            produto.Categoria.IdCategoria =
+                                (form.cbCategoria.SelectedItem as Categoria).IdCategoria;
+                            db.Produtos.Attach(produto);
+                            db.Entry(produto).State = EntityState.Modified;
+                            db.SaveChanges();
+                            CarregaProdutos(db);
+                            SimpleMessage.Inform("Produto editado com sucesso.", "Informação");
+                        }
                     }
                 }
             }
@@ -180,8 +193,39 @@ namespace EstoqueAPP
 
         private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (var db = new EstoqueAPPContext()) {
+            using (var db = new EstoqueAPPContext())
+            {
                 CarregaProdutos(db);
+            }
+        }
+
+        private void dgvProdutos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            btnEditProduto_Click(null, null);
+        }
+
+        private void btnDeleteProduto_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow linhaSelecionada = null;
+            if (dgvProdutos.SelectedRows.Count > 0)
+            {
+                linhaSelecionada = dgvProdutos.SelectedRows[0];
+                Produto produto = linhaSelecionada.DataBoundItem as Produto;
+                if (SimpleMessage.Confirm(
+                    "Deseja realmente excluir o produto selecionado?",
+                    "Exclusão de produto"))
+                {
+                    using (var db = new EstoqueAPPContext())
+                    {
+                        db.Produtos.Attach(produto);
+                        db.Entry(produto).State = EntityState.Deleted;
+                        db.SaveChanges();
+                        CarregaProdutos(db);
+                        SimpleMessage.Inform("Produto excluído com sucesso", "Informação");
+                    }
+
+                }
+
             }
         }
     }
